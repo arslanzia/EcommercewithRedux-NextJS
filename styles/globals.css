@@ -1,6 +1,7 @@
 *{
   padding: 0%;
   margin: 0%;
+  box-sizing: border-box;
 }
 
 .main{
@@ -142,8 +143,6 @@ color: white;
   
   
 }
-
-
 .img{
   position: relative;
 padding: 65px;
@@ -196,14 +195,10 @@ padding: 65px;
 
 
 .main-product{
-  padding: 10px;
-  
+  padding: 20px;
   background-color: rgb(243, 237, 237);
 
 }
-
-
-
 .subtle{
   color:rgb(94, 92, 92);
   font-weight: bold;
@@ -212,15 +207,19 @@ padding: 65px;
 .product-container{
   margin: 25px auto 0;
   position: relative;
-  display: grid;
+  /* display: flex; */
+  /* flex-direction: row; */
   justify-content: space-around;
 
 }
-
+/* 
 .product-container img{
     max-width: 200%;
     height: 200px;
-
+} */
+.card-container {
+  display: flex;
+  padding-left: 20px;
 }
 .card {
   background-color: #eec5ea;
@@ -228,6 +227,7 @@ padding: 65px;
   position: relative;
   box-shadow: 0 0 5px rgba(75, 75, 75, 0.07);
   z-index: 1;
+  margin: 20px;
 }
 
 .card-body{
@@ -308,7 +308,8 @@ padding: 65px;
   }
   .card-media {
     max-width: 100%;
-    height: auto;
+    height: 380px;
+    background-size: cover;
   }
 
 
@@ -346,6 +347,125 @@ padding: 65px;
     color: white;
     border-radius: 20px;
     text-transform: capitalize; 
+    
   }
  
+ /* <--------------------Cart Component Items-------------------------> */
+
+#cart-wrapper {
+  margin-top: 200px;
+}
+ .name-col {
+  width: 40%;
+}
+.quantity-col {
+  width: 5%;
+}
+.price-col {
+  width: 15%;
+}
+
+.updated-price-col {
+    width: 25%;
+}
+
+.update-col {
+    width: 10%
+}
+
+.remove-col {
+  width: 5%;
+}
+
+#cart-products-wrapper {
+  overflow-y: auto;
+}
+
+#cart-amount-wrapper {
+  overflow-x: auto;
+}
+
+#amount-controls {
+  background: white;
+  top: 90;
+  right: 0;
+}
+
+#cart {
+  text-align: left;
+  margin: 3.5em 0.5em;
+  padding: 0.5% 1.5%;
+  overflow-y: scroll;
+}
+
+
+#cart-amount-wrapper {
+  background: white;
+  padding: 1.5% 0 .5% 35%;
+  border-radius: 10px;
+}
+
+#total::before, #subtotal::before, .product-price::before, .cart-product-price::before, .cart-updated-product-price::before, #discountAmt::before {
+  content: '$';
+}
+
+.remove {
+  border-style: none;
+  font-weight: bolder;
+  padding: 2% 2.5%;
+  width: 100%;
+  height: 30px;
+  background: #ff7b67;
+  color: #fff1e7;
+  border-radius: 10px;
+}
+
+.remove:hover {
+  background: #fff1e7;
+  color: #ff7b67;
+}
+
+.remove:active {
+  background: #ff7b67;
+  color: #f5f1e7;
+}
  
+#cart #quantity-value {
+  width: 45%;
+}
+
+h1 {
+  font-weight: bolder;
+  text-align: center;
+}
+
+.quantity{
+  max-width: 20px;
+}
+
+
+
+
+/* ------------------------------------new Card Styling--------------------------- */
+
+.new-card-container {
+  display: flex;
+  justify-content: center;
+}
+
+.new-card{
+  background-color: #BA1EAA;
+  width: 300px;
+  height: 400px;
+  margin: 20px;
+  border-radius: 15px;
+  
+}
+
+.new-card-image{
+  background-color:#aaa;
+  height: 170px;
+  margin-bottom: 15px;
+  background-size:cover ;
+  border-radius: 15px 15px 0 0;
+}

@@ -6,11 +6,12 @@ const Product = () => {
   <>
         <div className="main-product">
             <div className="product-container">
-            <Grid container spacing={2}  >
-                <Grid item xs={6} >
+            
+            <Grid container spacing={1}  >
+                <Grid item xs={2} >
                   <Card/>
                 </Grid>
-                {/* <Grid item xs={6} >
+                {/* <Grid item xs={4} >
                 <Card/>
                 </Grid> */}
                 {/* <Grid item xs={4}>
@@ -25,7 +26,8 @@ const Product = () => {
                 <Grid item xs={4}>
                 <Card/>
                 </Grid> */}
-                </Grid>                   
+                </Grid>  
+      
             </div>
         </div>
   </>
